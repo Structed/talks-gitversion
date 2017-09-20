@@ -1,0 +1,353 @@
+D:\GitRepos
+λ  cd .\talks\gitversion\
+D:\GitRepos\talks\gitversion [master +1 ~0 -0 !]
+λ  pwd
+
+Path
+----
+D:\GitRepos\talks\gitversion
+
+
+D:\GitRepos\talks\gitversion [master +1 ~0 -0 !]
+λ  D:\GitRepos\talks\gitversion^C
+D:\GitRepos\talks\gitversion [master +1 ~0 -0 !]
+λ  dir
+
+
+    Directory: D:\GitRepos\talks\gitversion
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       20.09.2017     23:07                lib
+-a----       20.09.2017     23:03              0 build.cake
+------       27.11.2016     01:10         390144 GitVersion.exe
+------       27.11.2016     01:10          44544 GitVersion.pdb
+------       27.11.2016     01:10         428032 LibGit2Sharp.dll
+------       27.11.2016     01:10            252 LibGit2Sharp.dll.config
+------       27.11.2016     01:10        1170944 LibGit2Sharp.pdb
+-a----       20.09.2017     23:01              1 version.txt
+
+
+D:\GitRepos\talks\gitversion [master +7 ~0 -0 !]
+λ  ^C
+D:\GitRepos\talks\gitversion [master +7 ~0 -0 !]
+λ  .\GitVersion.exe
+{
+  "Major":0,
+  "Minor":1,
+  "Patch":0,
+  "PreReleaseTag":"",
+  "PreReleaseTagWithDash":"",
+  "PreReleaseLabel":"",
+  "PreReleaseNumber":"",
+  "BuildMetaData":0,
+  "BuildMetaDataPadded":"0000",
+  "FullBuildMetaData":"0.Branch.master.Sha.7b57367dfe4e7b444db269c9890f712584f0e053",
+  "MajorMinorPatch":"0.1.0",
+  "SemVer":"0.1.0",
+  "LegacySemVer":"0.1.0",
+  "LegacySemVerPadded":"0.1.0",
+  "AssemblySemVer":"0.1.0.0",
+  "FullSemVer":"0.1.0+0",
+  "InformationalVersion":"0.1.0+0.Branch.master.Sha.7b57367dfe4e7b444db269c9890f712584f0e053",
+  "BranchName":"master",
+  "Sha":"7b57367dfe4e7b444db269c9890f712584f0e053",
+  "NuGetVersionV2":"0.1.0",
+  "NuGetVersion":"0.1.0",
+  "CommitsSinceVersionSource":0,
+  "CommitsSinceVersionSourcePadded":"0000",
+  "CommitDate":"2017-09-20"
+}
+D:\GitRepos\talks\gitversion [master +7 ~0 -0 !]
+λ  git branch release/release-0.2
+D:\GitRepos\talks\gitversion [master +7 ~0 -0 !]
+λ  git checkout release/release-0.2
+Switched to branch 'release/release-0.2'
+D:\GitRepos\talks\gitversion [release/release-0.2 +7 ~0 -0 !]
+λ  .\GitVersion.exe
+{
+  "Major":0,
+  "Minor":2,
+  "Patch":0,
+  "PreReleaseTag":"beta.1",
+  "PreReleaseTagWithDash":"-beta.1",
+  "PreReleaseLabel":"beta",
+  "PreReleaseNumber":1,
+  "BuildMetaData":0,
+  "BuildMetaDataPadded":"0000",
+  "FullBuildMetaData":"0.Branch.release/release-0.2.Sha.7b57367dfe4e7b444db269c9890f712584f0e053",
+  "MajorMinorPatch":"0.2.0",
+  "SemVer":"0.2.0-beta.1",
+  "LegacySemVer":"0.2.0-beta1",
+  "LegacySemVerPadded":"0.2.0-beta0001",
+  "AssemblySemVer":"0.2.0.0",
+  "FullSemVer":"0.2.0-beta.1+0",
+  "InformationalVersion":"0.2.0-beta.1+0.Branch.release/release-0.2.Sha.7b57367dfe4e7b444db269c9890f712584f0e053",
+  "BranchName":"release/release-0.2",
+  "Sha":"7b57367dfe4e7b444db269c9890f712584f0e053",
+  "NuGetVersionV2":"0.2.0-beta0001",
+  "NuGetVersion":"0.2.0-beta0001",
+  "CommitsSinceVersionSource":0,
+  "CommitsSinceVersionSourcePadded":"0000",
+  "CommitDate":"2017-09-20"
+}
+D:\GitRepos\talks\gitversion [release/release-0.2 +7 ~0 -0 !]
+λ  git branch develop
+D:\GitRepos\talks\gitversion [release/release-0.2 +7 ~0 -0 !]
+λ  git checkout develop
+Switched to branch 'develop'
+D:\GitRepos\talks\gitversion [develop +7 ~0 -0 !]
+λ  git checkout feature/TICKET-1-add-gitversion
+error: pathspec 'feature/TICKET-1-add-gitversion' did not match any file(s) known to git.
+D:\GitRepos\talks\gitversion [develop +7 ~0 -0 !]
+λ  git branch feature/TICKET-1-add-gitversion
+D:\GitRepos\talks\gitversion [develop +7 ~0 -0 !]
+λ  git checkout feature/TICKET-1-add-gitversion
+Switched to branch 'feature/TICKET-1-add-gitversion'
+D:\GitRepos\talks\gitversion [feature/TICKET-1-add-gitversion +7 ~0 -0 !]
+λ  git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+D:\GitRepos\talks\gitversion [feature/TICKET-1-add-gitversion +7 ~0 -0 !]
+λ  git add .
+warning: LF will be replaced by CRLF in LibGit2Sharp.dll.config.
+The file will have its original line endings in your working directory.
+D:\GitRepos\talks\gitversion [feature/TICKET-1-add-gitversion +12 ~0 -0 ~]
+λ  git commit -m "Added GitVersion itself"
+[feature/TICKET-1-add-gitversion 5800497] Added GitVersion itself
+ 11 files changed, 4 insertions(+)
+ create mode 100644 GitVersion.exe
+ create mode 100644 GitVersion.pdb
+ create mode 100644 LibGit2Sharp.dll
+ create mode 100644 LibGit2Sharp.dll.config
+ create mode 100644 LibGit2Sharp.pdb
+ create mode 100644 lib/linux/x86_64/libgit2-baa87df.so
+ create mode 100644 lib/osx/libgit2-baa87df.dylib
+ create mode 100644 lib/win32/x64/git2-baa87df.dll
+ create mode 100644 lib/win32/x64/git2-baa87df.pdb
+ create mode 100644 lib/win32/x86/git2-baa87df.dll
+ create mode 100644 lib/win32/x86/git2-baa87df.pdb
+D:\GitRepos\talks\gitversion [feature/TICKET-1-add-gitversion]
+λ  git checkout develop^C
+D:\GitRepos\talks\gitversion [feature/TICKET-1-add-gitversion]
+λ  .\GitVersion.exe
+{
+  "Major":0,
+  "Minor":1,
+  "Patch":0,
+  "PreReleaseTag":"TICKET-1-add-gitversion.1",
+  "PreReleaseTagWithDash":"-TICKET-1-add-gitversion.1",
+  "PreReleaseLabel":"TICKET-1-add-gitversion",
+  "PreReleaseNumber":1,
+  "BuildMetaData":1,
+  "BuildMetaDataPadded":"0001",
+  "FullBuildMetaData":"1.Branch.feature/TICKET-1-add-gitversion.Sha.580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "MajorMinorPatch":"0.1.0",
+  "SemVer":"0.1.0-TICKET-1-add-gitversion.1",
+  "LegacySemVer":"0.1.0-TICKET-1-add-gitver1",
+  "LegacySemVerPadded":"0.1.0-TICKET-1-add-git0001",
+  "AssemblySemVer":"0.1.0.0",
+  "FullSemVer":"0.1.0-TICKET-1-add-gitversion.1+1",
+  "InformationalVersion":"0.1.0-TICKET-1-add-gitversion.1+1.Branch.feature/TICKET-1-add-gitversion.Sha.580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "BranchName":"feature/TICKET-1-add-gitversion",
+  "Sha":"580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "NuGetVersionV2":"0.1.0-ticket-1-add-git0001",
+  "NuGetVersion":"0.1.0-ticket-1-add-git0001",
+  "CommitsSinceVersionSource":1,
+  "CommitsSinceVersionSourcePadded":"0001",
+  "CommitDate":"2017-09-20"
+}
+D:\GitRepos\talks\gitversion [feature/TICKET-1-add-gitversion]
+λ  git checkout develop
+Switched to branch 'develop'
+D:\GitRepos\talks\gitversion [develop]
+λ  git merge feature/TICKET-1-add-gitversion
+Updating 7b57367..5800497
+Fast-forward
+ GitVersion.exe                      | Bin 0 -> 390144 bytes
+ GitVersion.pdb                      | Bin 0 -> 44544 bytes
+ LibGit2Sharp.dll                    | Bin 0 -> 428032 bytes
+ LibGit2Sharp.dll.config             |   4 ++++
+ LibGit2Sharp.pdb                    | Bin 0 -> 1170944 bytes
+ lib/linux/x86_64/libgit2-baa87df.so | Bin 0 -> 1190437 bytes
+ lib/osx/libgit2-baa87df.dylib       | Bin 0 -> 1676776 bytes
+ lib/win32/x64/git2-baa87df.dll      | Bin 0 -> 1119232 bytes
+ lib/win32/x64/git2-baa87df.pdb      | Bin 0 -> 6041600 bytes
+ lib/win32/x86/git2-baa87df.dll      | Bin 0 -> 843264 bytes
+ lib/win32/x86/git2-baa87df.pdb      | Bin 0 -> 6017024 bytes
+ 11 files changed, 4 insertions(+)
+ create mode 100644 GitVersion.exe
+ create mode 100644 GitVersion.pdb
+ create mode 100644 LibGit2Sharp.dll
+ create mode 100644 LibGit2Sharp.dll.config
+ create mode 100644 LibGit2Sharp.pdb
+ create mode 100644 lib/linux/x86_64/libgit2-baa87df.so
+ create mode 100644 lib/osx/libgit2-baa87df.dylib
+ create mode 100644 lib/win32/x64/git2-baa87df.dll
+ create mode 100644 lib/win32/x64/git2-baa87df.pdb
+ create mode 100644 lib/win32/x86/git2-baa87df.dll
+ create mode 100644 lib/win32/x86/git2-baa87df.pdb
+D:\GitRepos\talks\gitversion [develop]
+λ  .\GitVersion.exe
+{
+  "Major":0,
+  "Minor":1,
+  "Patch":0,
+  "PreReleaseTag":"unstable.1",
+  "PreReleaseTagWithDash":"-unstable.1",
+  "PreReleaseLabel":"unstable",
+  "PreReleaseNumber":1,
+  "BuildMetaData":"",
+  "BuildMetaDataPadded":"",
+  "FullBuildMetaData":"Branch.develop.Sha.580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "MajorMinorPatch":"0.1.0",
+  "SemVer":"0.1.0-unstable.1",
+  "LegacySemVer":"0.1.0-unstable1",
+  "LegacySemVerPadded":"0.1.0-unstable0001",
+  "AssemblySemVer":"0.1.0.0",
+  "FullSemVer":"0.1.0-unstable.1",
+  "InformationalVersion":"0.1.0-unstable.1+Branch.develop.Sha.580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "BranchName":"develop",
+  "Sha":"580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "NuGetVersionV2":"0.1.0-unstable0001",
+  "NuGetVersion":"0.1.0-unstable0001",
+  "CommitsSinceVersionSource":1,
+  "CommitsSinceVersionSourcePadded":"0001",
+  "CommitDate":"2017-09-20"
+}
+D:\GitRepos\talks\gitversion [develop]
+λ  git checkout master
+Switched to branch 'master'
+D:\GitRepos\talks\gitversion [master]
+λ  GitShowBranch.cmd^C
+D:\GitRepos\talks\gitversion [master]
+λ  .\GitVersion.exe
+.\GitVersion.exe : The term '.\GitVersion.exe' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try
+again.
+At line:1 char:1
++ .\GitVersion.exe
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\GitVersion.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+D:\GitRepos\talks\gitversion [master]
+λ  git merge ^C
+D:\GitRepos\talks\gitversion [master]
+λ  git checkout release/release-0.2
+Switched to branch 'release/release-0.2'
+D:\GitRepos\talks\gitversion [release/release-0.2]
+λ  git merge develop
+Updating 7b57367..5800497
+Fast-forward
+ GitVersion.exe                      | Bin 0 -> 390144 bytes
+ GitVersion.pdb                      | Bin 0 -> 44544 bytes
+ LibGit2Sharp.dll                    | Bin 0 -> 428032 bytes
+ LibGit2Sharp.dll.config             |   4 ++++
+ LibGit2Sharp.pdb                    | Bin 0 -> 1170944 bytes
+ lib/linux/x86_64/libgit2-baa87df.so | Bin 0 -> 1190437 bytes
+ lib/osx/libgit2-baa87df.dylib       | Bin 0 -> 1676776 bytes
+ lib/win32/x64/git2-baa87df.dll      | Bin 0 -> 1119232 bytes
+ lib/win32/x64/git2-baa87df.pdb      | Bin 0 -> 6041600 bytes
+ lib/win32/x86/git2-baa87df.dll      | Bin 0 -> 843264 bytes
+ lib/win32/x86/git2-baa87df.pdb      | Bin 0 -> 6017024 bytes
+ 11 files changed, 4 insertions(+)
+ create mode 100644 GitVersion.exe
+ create mode 100644 GitVersion.pdb
+ create mode 100644 LibGit2Sharp.dll
+ create mode 100644 LibGit2Sharp.dll.config
+ create mode 100644 LibGit2Sharp.pdb
+ create mode 100644 lib/linux/x86_64/libgit2-baa87df.so
+ create mode 100644 lib/osx/libgit2-baa87df.dylib
+ create mode 100644 lib/win32/x64/git2-baa87df.dll
+ create mode 100644 lib/win32/x64/git2-baa87df.pdb
+ create mode 100644 lib/win32/x86/git2-baa87df.dll
+ create mode 100644 lib/win32/x86/git2-baa87df.pdb
+D:\GitRepos\talks\gitversion [release/release-0.2]
+λ  .\GitVersion.exe
+{
+  "Major":0,
+  "Minor":2,
+  "Patch":0,
+  "PreReleaseTag":"beta.1",
+  "PreReleaseTagWithDash":"-beta.1",
+  "PreReleaseLabel":"beta",
+  "PreReleaseNumber":1,
+  "BuildMetaData":0,
+  "BuildMetaDataPadded":"0000",
+  "FullBuildMetaData":"0.Branch.release/release-0.2.Sha.580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "MajorMinorPatch":"0.2.0",
+  "SemVer":"0.2.0-beta.1",
+  "LegacySemVer":"0.2.0-beta1",
+  "LegacySemVerPadded":"0.2.0-beta0001",
+  "AssemblySemVer":"0.2.0.0",
+  "FullSemVer":"0.2.0-beta.1+0",
+  "InformationalVersion":"0.2.0-beta.1+0.Branch.release/release-0.2.Sha.580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "BranchName":"release/release-0.2",
+  "Sha":"580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "NuGetVersionV2":"0.2.0-beta0001",
+  "NuGetVersion":"0.2.0-beta0001",
+  "CommitsSinceVersionSource":0,
+  "CommitsSinceVersionSourcePadded":"0000",
+  "CommitDate":"2017-09-20"
+}
+D:\GitRepos\talks\gitversion [release/release-0.2]
+λ  git checkout master
+Switched to branch 'master'
+D:\GitRepos\talks\gitversion [master]
+λ  git merge release/release-0.2
+Updating 7b57367..5800497
+Fast-forward
+ GitVersion.exe                      | Bin 0 -> 390144 bytes
+ GitVersion.pdb                      | Bin 0 -> 44544 bytes
+ LibGit2Sharp.dll                    | Bin 0 -> 428032 bytes
+ LibGit2Sharp.dll.config             |   4 ++++
+ LibGit2Sharp.pdb                    | Bin 0 -> 1170944 bytes
+ lib/linux/x86_64/libgit2-baa87df.so | Bin 0 -> 1190437 bytes
+ lib/osx/libgit2-baa87df.dylib       | Bin 0 -> 1676776 bytes
+ lib/win32/x64/git2-baa87df.dll      | Bin 0 -> 1119232 bytes
+ lib/win32/x64/git2-baa87df.pdb      | Bin 0 -> 6041600 bytes
+ lib/win32/x86/git2-baa87df.dll      | Bin 0 -> 843264 bytes
+ lib/win32/x86/git2-baa87df.pdb      | Bin 0 -> 6017024 bytes
+ 11 files changed, 4 insertions(+)
+ create mode 100644 GitVersion.exe
+ create mode 100644 GitVersion.pdb
+ create mode 100644 LibGit2Sharp.dll
+ create mode 100644 LibGit2Sharp.dll.config
+ create mode 100644 LibGit2Sharp.pdb
+ create mode 100644 lib/linux/x86_64/libgit2-baa87df.so
+ create mode 100644 lib/osx/libgit2-baa87df.dylib
+ create mode 100644 lib/win32/x64/git2-baa87df.dll
+ create mode 100644 lib/win32/x64/git2-baa87df.pdb
+ create mode 100644 lib/win32/x86/git2-baa87df.dll
+ create mode 100644 lib/win32/x86/git2-baa87df.pdb
+D:\GitRepos\talks\gitversion [master]
+λ  .\GitVersion.exe
+{
+  "Major":0,
+  "Minor":1,
+  "Patch":0,
+  "PreReleaseTag":"",
+  "PreReleaseTagWithDash":"",
+  "PreReleaseLabel":"",
+  "PreReleaseNumber":"",
+  "BuildMetaData":1,
+  "BuildMetaDataPadded":"0001",
+  "FullBuildMetaData":"1.Branch.master.Sha.580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "MajorMinorPatch":"0.1.0",
+  "SemVer":"0.1.0",
+  "LegacySemVer":"0.1.0",
+  "LegacySemVerPadded":"0.1.0",
+  "AssemblySemVer":"0.1.0.0",
+  "FullSemVer":"0.1.0+1",
+  "InformationalVersion":"0.1.0+1.Branch.master.Sha.580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "BranchName":"master",
+  "Sha":"580049760a9a836d13b85158d5ad4aee6e99bbd2",
+  "NuGetVersionV2":"0.1.0",
+  "NuGetVersion":"0.1.0",
+  "CommitsSinceVersionSource":1,
+  "CommitsSinceVersionSourcePadded":"0001",
+  "CommitDate":"2017-09-20"
+}
+D:\GitRepos\talks\gitversion [master]
+λ git tag 0.2
